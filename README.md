@@ -62,7 +62,7 @@ TOKEN='取得したアクセストークン'
 # Note
 LINE Notifyのトークン取得方法は以下の記事をご覧ください。
 
-【Python】LINE Notifyの手引き #LineNotify - Qiita
+### 【Python】LINE Notifyの手引き #LineNotify - Qiita
 
 <https://qiita.com/daikidaiku/items/4c364b393d4af16ac283>
 
