@@ -1,12 +1,12 @@
 #coding:UTF-8
-import urllib.request
-import requests
 import os
-from dotenv import load_dotenv
+import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 
 load_dotenv() # .envファイルの読み込み
 token = os.getenv('TOKEN') # Tokenを読み込み(Lambda実装時は別の方法で環境変数を取ってくる)
+
 api_url = 'https://notify-api.line.me/api/notify' # APIのURL
 
 # リクエストのヘッダーを定義
@@ -39,9 +39,7 @@ def get_weather():
 def main():
     contents = get_weather()
     payload = {'message': contents}
-    data = urllib.parse.urlencode(payload).encode('ascii')
-    req = urllib.request.Request(api_url, headers=request_headers, data=data, method='POST')
-    conn = urllib.request.urlopen(req)
+    post = requests.post(api_url ,headers = request_headers ,params=payload)
 
 def lambda_handler(event, context):
     main()

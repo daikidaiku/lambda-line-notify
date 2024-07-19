@@ -1,10 +1,11 @@
 #coding:UTF-8
-import urllib.request
 import os
+import urllib.request
 from dotenv import load_dotenv
 
 load_dotenv() # .envファイルの読み込み
 token = os.getenv('TOKEN') # Tokenを読み込み(Lambda実装時は別の方法で環境変数を取ってくる)
+
 api_url = 'https://notify-api.line.me/api/notify' # APIのURL
 
 # リクエストのヘッダーを定義
