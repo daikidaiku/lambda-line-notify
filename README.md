@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/badge/-AWS Lambda-FFFFFF.svg?logo=AWSLambda&style=flat">
 </p>
 
-# lab-detection<!-- TODO 書く -->
+# lambda-line-notify<!-- TODO 書く -->
 LINE NotifyによりLINEにテキストや写真を通知するPythonコードです。
 AWSのLambdaへの実装を想定しています。
 
@@ -49,9 +49,11 @@ pip install python-dotenv # Lambda以外で利用する場合
 
 
 ```bash
-git clone https://github.com/daikidaiku/upload-lab-photo
-cd upload-lab-photo
-python3 main.py
+git clone https://github.com/daikidaiku/lambda-line-notify
+cd lambda-line-notify
+python3 syokyu.py
+python3 chukyu.py
+python3 jokyu.py
 ``` 
 
 .envファイル内は以下のように記載してください。
