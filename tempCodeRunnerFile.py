@@ -1,0 +1,1 @@
+    conn = urllib.request.urlopen(req)
