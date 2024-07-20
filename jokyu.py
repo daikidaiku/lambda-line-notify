@@ -4,8 +4,12 @@ import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
+# トークンを読み込み(Local)
 load_dotenv() # .envファイルの読み込み
-token = os.getenv('TOKEN') # Tokenを読み込み(Lambda実装時は別の方法で環境変数を取ってくる)
+token = os.getenv('TOKEN')
+
+# トークンを読み込み(Lambda)
+# token = os.environ['TOKEN']
 
 api_url = 'https://notify-api.line.me/api/notify' # APIのURL
 
